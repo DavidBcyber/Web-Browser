@@ -1,0 +1,112 @@
+header, nav, main, footer { display: block; }
+body { background-color: #330000;
+       font-family: Verdana, Arial, sans-serif;
+}
+#wrapper { width: 960px;
+           margin: auto;
+		   background-color: #8c8c8c;
+		   color: #330000;
+		   box-shadow: 5px 5px 5px #000000;
+}
+h1 { background-image: url(images/logo.gif);
+     background-repeat: no-repeat;
+     background-color: #ffbf80;
+	 height: 110px;
+	 font-family: Georgia, "Times New Roman", serif;
+	 font-size: 4.5em;
+     padding-left: 220px;
+	 padding-top: 20px;
+	 text-shadow: 3px 3px 3px #90745D;
+	 margin-bottom: 0;
+}
+nav { padding-top: 10px;
+      float: left;
+      width: 200px; 
+}
+nav ul { list-style-type: none; 
+       padding-left: 20px;
+	 }
+nav li { padding-bottom: 5px;
+       font-weight: bold;
+}
+nav a { text-decoration: none; }
+nav a:link { color: #330000; }
+nav a:visited{ color: #e60000; }
+nav a:hover { color: #3F4632; }
+
+
+main { background-color: #e69900;
+          margin-left: 200px;
+          padding: 1px 20px 20px 20px;   
+		  min-height: 300px;
+}
+main img { float: right;
+              padding: 20px;
+}
+
+footer { background-color: #e65c00;
+       margin-left: 200px;
+       padding: 20px;
+       text-align: center;
+	   font-size: small;
+	   font-style: italic;
+}
+/* Table Styles */
+table {
+	margin-left: left;
+	width: 40%;
+	border-spacing: 0;
+}
+/* Styles for mobile */
+#mobile { 
+	display: inline; /*display as inline element*/
+}
+/* Styles for desktop */
+#desktop { 
+	display: none; /*hide element*/
+}
+/*Media query for mobile*/
+@media (min-width: 600px) {
+	header {
+		padding-left: 0;
+		text-align: center;
+	}
+	h1 { font-size: 3em; }
+	nav ul {
+		flex-flow: row nowrap;
+		justify-content: space-around;
+	}
+	nav li { border-bottom: none; }
+	#mobile {
+		display: inline;
+	}
+	#desktop {
+		display: none;
+	}
+	.details {
+		display: flex;
+		flex-direction: row;
+	}
+	h4 {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	form {
+		width: 40%;
+		display: grid;
+		grid-gap: 1em;
+		grid-template-columns: 6em 1fr;
+	}
+	input[type="submit"] {
+		grid-column: 2 / 3;
+		width: 9em;
+	}
+}
+/*Media Queries for Desktop*/
+@media (min-width: 1024px){
+	@supports (display: grid) {
+		header { grid-area: header; }
+		nav { grid-area: nav; }
+		main { grid-area: main; }
+		footer { grid-area: footer; }
+	}
