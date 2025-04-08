@@ -10,6 +10,19 @@
   <header>
       <h1>Cama y Desayuno</h1>
   </header>
+<p id ="greeting"></p>
+<script>
+const hour = new Date().getHours();
+let greeting;
+
+if (hour < 18) {
+	greeting = "Good day";
+}
+else {
+	greeting = "Good evening";
+}
+document.getElementById("greeting").inneerHTML = greeting;
+</script>
   <nav>
   <ul> 
     <li><a href="index.html">Home</a></li>
